@@ -2,6 +2,14 @@
 
 当前版本：0.2.0｜日期：2026-11-08
 
+## 标准插件安装复查
+
+- 已在本机 Codex CLI 0.160.0 实际运行 README 中的 GitHub marketplace 添加和插件安装命令，无需克隆仓库或运行项目级安装脚本。
+- marketplace 添加成功；`codex plugin add ai-teacher@ai-teacher-local --json` 返回版本 0.2.0，安装位置为 Codex 管理的缓存目录。
+- `codex plugin list --marketplace ai-teacher-local --json` 确认 `installed: true`、`enabled: true`，marketplace 来源为本项目 GitHub 仓库。
+- 此次只修改默认安装说明、试用入口与验证记录，保留原兼容安装器；插件清单和技能实现未变。此前结构已支持原生插件安装，原说明将兼容脚本放在默认位置，现已纠正。
+- 安装/启用已验证；新聊天中的技能选择和实际任务表现仍待试用，不能用安装成功证明工作流效果。下面的历史验证边界按当时范围保留。
+
 ## 当前实现复查
 
 - 变更范围：技能与 UI/插件元数据、主动发现/设计/交付/复核指引、文档、预期行为示例、深度案例与对照协议及空模板。未修改状态脚本/安装器、schema v1 或测试实现，未发布新分发包。

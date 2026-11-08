@@ -6,10 +6,6 @@
 
 只有一个入口 `$ai-teacher`，不预设六种科研任务或通用课程。当前包含主动目标发现机制和深度案例/对照试用协议；目前是技能指引与记录机制，尚未证明能降低真人使用负担。
 
-## 版本约定
-
-当前产品版本统一为 **0.2.0**，不延续加入 Git 前材料的版本编号。Git 提交记录每次修改，产品版本按明确发布决定更新，提交次数不自动决定版本号。插件元数据为版本号来源，技能元数据和本文保持一致；试用与评估用提交号或内容哈希固定快照，避免同一产品版本内的改动混淆。
-
 ## 它怎样工作
 
 1. 从用户的自然目标出发，主动选择关键问题、样稿或小试，发现用途、约束和瓶颈；明确区分已确认信息、推断与待确认项。
@@ -21,25 +17,27 @@
 
 ## 安装与第一次调用
 
-```bash
-git clone https://github.com/airesearchjishengyin/ai-teacher.git
-cd ai-teacher
-```
-
-需要 Codex 和 Python 3.10+。下载仓库 ZIP 后解压，或通过 Git 克隆；进入仓库根目录运行，先指定一个公开/模拟项目：
+按 Codex 标准插件方式安装，在终端运行：
 
 ```bash
-python3 scripts/install_skills.py --project "/你的/公开或模拟项目" --dry-run
-python3 scripts/install_skills.py --project "/你的/公开或模拟项目"
+codex plugin marketplace add airesearchjishengyin/ai-teacher --ref main && codex plugin add ai-teacher@ai-teacher-local
 ```
 
-只安装该项目 `.agents/skills/ai-teacher/`，不改全局配置；同名存在则拒绝覆盖。打开该项目的新会话：
+安装后在 Codex 新建聊天，选择 **AI Teacher**，直接说出目标：
 
-> 用 $ai-teacher 帮我比较实验结果，方便决定下一步做什么。请主动问出你需要的信息，先做一小段让我判断是否符合目标，再搭建和检查流程。只使用公开/模拟材料。
+> 帮我比较实验结果，方便决定下一步做什么。请主动问出你需要的信息，先做一小段让我判断是否符合目标，再搭建和检查流程。只使用公开/模拟材料。
 
 也可以只说“我想让组会准备省心一些”。不必先定位瓶颈或写完整需求，Teacher 应主动发现关键缺口；信息足以可逆小试就推进，再从反馈继续对齐。先做一段，不必自动化整个科研过程。
 
-若当前 Codex 看不到技能，让它先读取安装目录的 SKILL.md；新会话发现与真实模型表现仍需用户试用，文件安装通过不等于调用效果已验证。
+无需克隆仓库、下载 ZIP 或运行本项目的安装脚本。插件由 Codex 管理，可在插件页查看、启用和卸载；若插件页未刷新，重启 Codex 后再新建聊天。记录工作流状态时会使用 Python 3.10+，由 Teacher 检查运行环境。
+
+卸载：
+
+```bash
+codex plugin remove ai-teacher@ai-teacher-local
+```
+
+安装流程遵循 [Codex 官方插件说明](https://developers.openai.com/codex/plugins)；当前仓库通过 GitHub 插件源分发。
 
 ## 持续更新到底指什么
 
@@ -48,17 +46,6 @@ python3 scripts/install_skills.py --project "/你的/公开或模拟项目"
 **不是模型权重训练，也不是已启动的后台监控。** 未打开会话时不会自行上网；定时追踪须另行明确授权并配置宿主调度。本包没有预装“最新技术全库”，首次按需研究；没有联网能力会如实说明。
 
 不绑定付费 API，无遥测、自动训练或反馈上传。Codex/联网工具仍可能收费及传输上下文。企业私有原始数据、代码、凭据不进入试用；未公开研究材料先确认权限和数据去向。本包不是保密沙箱。
-
-## 整包安装（可选）
-
-支持本机所核对 `codex plugin` 语法的 CLI，可在本包根目录运行：
-
-```bash
-codex plugin marketplace add .
-codex plugin add ai-teacher@ai-teacher-local
-```
-
-此方式修改插件配置，需保留解压目录；不要和项目级安装重复使用。整包安装和实际技能发现未在真实用户会话中验证，首轮优先项目级。插件模式技能名以列表为准。卸载：`codex plugin remove ai-teacher@ai-teacher-local`，然后 `codex plugin marketplace remove ai-teacher-local`；项目级只删本包的 `.agents/skills/ai-teacher/`。
 
 ## 试用与边界
 
