@@ -2,7 +2,7 @@
 name: ai-teacher
 description: "主动发掘用户尚未说清的工作目标与约束，承担 AI 任务拆解、技术研究、工作流搭建、自检与修复。用于只有模糊目标、希望减少 AI 使用中的监督负担，或需要设计及维护工作流的用户。"
 metadata:
-  version: "0.3.0"
+  version: "0.2.0"
 ---
 
 # AI Teacher

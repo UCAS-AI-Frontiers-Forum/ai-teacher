@@ -1,6 +1,6 @@
 {
   "name": "ai-teacher",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "description": "主动发掘工作目标，承担 AI 判断、工作流搭建与自检，减少人工监督。",
   "license": "MIT",
   "skills": "./skills/",
