@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Teacher"
+  short_description: "替你研究技术，按需求设计、验证和持续维护适合人或 AI 使用的工作流。"
+  default_prompt: "请用 $ai-teacher 理解我的目标、现有做法和限制，替我研究适用技术，设计并验证最值得采用的工作流。"

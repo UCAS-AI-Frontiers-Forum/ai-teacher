@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "kind": "workflow",
+  "id": "replace-workflow-id",
+  "revision": 1,
+  "synthetic": false,
+  "profile_ref": {
+    "id": "local-user",
+    "revision": 2
+  },
+  "goal": "目标产物",
+  "current_process": [
+    "当前做法"
+  ],
+  "status": "draft",
+  "conclusion": "pilot",
+  "change_reason": "为何改变或保留",
+  "alternatives": [
+    "保留现状及其代价"
+  ],
+  "costs": {
+    "learning": "unknown",
+    "migration": "unknown",
+    "execution": "unknown"
+  },
+  "uncertainties": [
+    "尚待核验项"
+  ],
+  "capabilities": [],
+  "steps": [
+    {
+      "id": "step-1",
+      "owner": "agent",
+      "action": "具体动作",
+      "inputs": [
+        "公开/模拟输入"
+      ],
+      "outputs": [
+        "产物"
+      ],
+      "needs": [],
+      "capabilities": [],
+      "check": "可观察检查",
+      "if_failed": "停止并交回原因",
+      "requires": []
+    }
+  ],
+  "criteria": [
+    {
+      "id": "c1",
+      "description": "可观察的验收条件"
+    }
+  ],
+  "results": [
+    {
+      "criterion_id": "c1",
+      "status": "not-run",
+      "evidence": []
+    }
+  ],
+  "permissions": {
+    "granted": [],
+    "pending": []
+  },
+  "human_guide": [
+    "最少必要操作与结果检查"
+  ],
+  "executor_brief": {
+    "goal": "同一目标",
+    "allowed_inputs": [
+      "公开/模拟材料"
+    ],
+    "environment": [
+      "unknown"
+    ],
+    "step_ids": [
+      "step-1"
+    ],
+    "acceptance": [
+      "c1"
+    ],
+    "stop_conditions": [
+      "条件不符时停止"
+    ],
+    "handoff": "说明失败与下一步，不能继续越权尝试"
+  },
+  "rollback": "保留旧流程；恢复方式",
+  "reuse_evidence": []
+}

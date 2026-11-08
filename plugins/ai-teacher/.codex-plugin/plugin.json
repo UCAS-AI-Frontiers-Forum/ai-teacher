@@ -1,0 +1,15 @@
+{
+  "name": "ai-teacher",
+  "version": "0.2.0",
+  "description": "替用户研究技术，按真实需求设计、验证与维护工作流。",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Teacher",
+    "shortDescription": "一个入口：替你研究技术，为你设计并维护适合的工作流。",
+    "category": "Education & Research",
+    "defaultPrompt": [
+      "我想改善实际工作，请用 ai-teacher 理解需求、研究适合的方法并验证流程。"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+# Personal state and draft records never belong in the plugin repository.
+ai-teacher-work/
+*.local.json

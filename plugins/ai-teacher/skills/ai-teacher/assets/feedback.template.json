@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "kind": "feedback",
+  "id": "replace-feedback-id",
+  "revision": 1,
+  "synthetic": false,
+  "workflow_ref": {
+    "id": "replace-workflow-id",
+    "revision": 1
+  },
+  "signal": "partial",
+  "observation": "self-report",
+  "detail": "哪一步发生什么，与预期差异在哪里",
+  "evidence": []
+}

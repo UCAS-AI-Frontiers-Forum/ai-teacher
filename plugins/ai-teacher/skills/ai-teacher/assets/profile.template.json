@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "profile",
+  "id": "local-user",
+  "revision": 2,
+  "synthetic": false,
+  "expertise": {
+    "domain": "unknown",
+    "engineering": "unknown",
+    "ai_workflow": "unknown"
+  },
+  "task": {
+    "goal": "替换为具体目标",
+    "current_process": [
+      "替换为当前做法"
+    ],
+    "bottleneck": "unknown"
+  },
+  "constraints": {
+    "data_policy": "public-or-synthetic-only",
+    "environment": [
+      "unknown"
+    ],
+    "budget": "unknown",
+    "time": "unknown"
+  },
+  "delivery_mode": "both",
+  "notes": "仅保存本次任务需要的信息；修订号按当前最新值加一。"
+}

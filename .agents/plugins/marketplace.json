@@ -1,0 +1,20 @@
+{
+  "name": "ai-teacher-local",
+  "interface": {
+    "displayName": "AI Teacher 试用包"
+  },
+  "plugins": [
+    {
+      "name": "ai-teacher",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai-teacher"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

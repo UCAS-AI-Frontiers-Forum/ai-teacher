@@ -1,0 +1,98 @@
+{
+  "synthetic_only": true,
+  "what_was_run": "state persistence, dependency expiry and feedback review flags",
+  "not_run": [
+    "web research",
+    "model behavior",
+    "scientific workflow",
+    "human trial"
+  ],
+  "initial": {
+    "as_of": "2026-11-08",
+    "due_capabilities": [],
+    "profiles": [
+      {
+        "id": "local-user",
+        "revision": 2
+      }
+    ],
+    "workflows": [
+      {
+        "id": "experiment-records",
+        "revision": 1,
+        "status": "draft",
+        "last_verified_revision": null,
+        "last_in_use_revision": null,
+        "effective_revision": null,
+        "reviewed_revisions": [
+          1
+        ],
+        "needs_review": false,
+        "reasons": []
+      }
+    ],
+    "network_checked": false,
+    "background_monitoring": false
+  },
+  "after_review_date": {
+    "as_of": "2026-11-16",
+    "due_capabilities": [
+      "fixture-parser"
+    ],
+    "profiles": [
+      {
+        "id": "local-user",
+        "revision": 2
+      }
+    ],
+    "workflows": [
+      {
+        "id": "experiment-records",
+        "revision": 1,
+        "status": "draft",
+        "last_verified_revision": null,
+        "last_in_use_revision": null,
+        "effective_revision": null,
+        "reviewed_revisions": [
+          1
+        ],
+        "needs_review": true,
+        "reasons": [
+          "capability-review-due:fixture-parser"
+        ]
+      }
+    ],
+    "network_checked": false,
+    "background_monitoring": false
+  },
+  "after_feedback": {
+    "as_of": "2026-11-08",
+    "due_capabilities": [],
+    "profiles": [
+      {
+        "id": "local-user",
+        "revision": 2
+      }
+    ],
+    "workflows": [
+      {
+        "id": "experiment-records",
+        "revision": 1,
+        "status": "draft",
+        "last_verified_revision": null,
+        "last_in_use_revision": null,
+        "effective_revision": null,
+        "reviewed_revisions": [
+          1
+        ],
+        "needs_review": true,
+        "reasons": [
+          "feedback-partial:demo-feedback"
+        ]
+      }
+    ],
+    "network_checked": false,
+    "background_monitoring": false
+  },
+  "workflow_revision_unchanged": true
+}

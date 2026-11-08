@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "capability",
+  "id": "replace-capability-id",
+  "revision": 1,
+  "synthetic": false,
+  "title": "能力名称，不只写产品名",
+  "supports": "能改善什么步骤",
+  "status": "candidate",
+  "sources": [
+    {
+      "url": "https://example.invalid/replace-source",
+      "checked_on": "2026-11-08",
+      "claim": "已阅读来源支持什么",
+      "evidence": "evidence/replace-source-note.md"
+    }
+  ],
+  "environment": [
+    "填写实际适用条件"
+  ],
+  "access": "unknown",
+  "license": "unknown",
+  "cost": "unknown",
+  "validation": {
+    "level": "documented",
+    "tested_on": null,
+    "evidence": [],
+    "limitations": [
+      "尚未运行试验"
+    ]
+  },
+  "review_on": "2026-11-15"
+}
