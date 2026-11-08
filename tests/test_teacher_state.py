@@ -239,6 +239,13 @@ class TeacherStateTests(unittest.TestCase):
         self.assertFalse((project / ".agents").exists())
         actual = subprocess.run([sys.executable, str(install), "--project", str(project)], capture_output=True, text=True)
         self.assertEqual(actual.returncode, 0, actual.stderr)
+        installed_skills = project / ".agents/skills"
+        for name in ("ai-teacher", "work-memory"):
+            source = ROOT / "plugins/ai-teacher/skills" / name
+            for original in source.rglob("*"):
+                if original.is_file():
+                    installed = installed_skills / name / original.relative_to(source)
+                    self.assertEqual(installed.read_bytes(), original.read_bytes())
         duplicate = subprocess.run([sys.executable, str(install), "--project", str(project)], capture_output=True, text=True)
         self.assertEqual(duplicate.returncode, 2)
         script = project / ".agents/skills/ai-teacher/scripts/teacher_state.py"

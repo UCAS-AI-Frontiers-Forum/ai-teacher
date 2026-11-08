@@ -1,0 +1,4 @@
+interface:
+  display_name: "工作记忆提取"
+  short_description: "从相关记忆提取流程、问题、取舍和变化，减少重复解释并保留依据。"
+  default_prompt: "请用 $work-memory 围绕我这次的工作目标提取相关记忆，说明可直接沿用的信息、历史依据与仍需澄清的关键变化。"

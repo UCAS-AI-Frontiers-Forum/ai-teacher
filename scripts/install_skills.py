@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Install the AI Teacher skill into an explicitly selected project, never globally."""
+"""Install AI Teacher and its helper skill into an explicit project (legacy compatibility)."""
 import argparse
 from pathlib import Path
 import shutil
 import sys
 
-NAMES = ("ai-teacher",)
+NAMES = ("ai-teacher", "work-memory")
 
 
 def install(project, bundle, dry_run=False):
