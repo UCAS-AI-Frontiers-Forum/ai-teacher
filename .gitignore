@@ -8,4 +8,5 @@ __pycache__/
 venv/
 # Personal state and draft records never belong in the plugin repository.
 ai-teacher-work/
+trial-data/
 *.local.json
